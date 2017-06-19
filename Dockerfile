@@ -14,9 +14,9 @@ RUN apt-get install -y libffi-dev libssl-dev wget jq
 
 RUN pip3 install -U pip
 
-RUN pip3 install azure-cli && \
-    pip3 install awscli && \
-    npm install --no-optional -g azure-cli
+RUN pip3 install azure-cli==2.0.7 && \
+    pip3 install awscli==1.11.107 && \
+    npm install --no-optional -g azure-cli@0.10.14
 
 ENV NASH_VERSION=v0.5
 RUN cd /tmp && \
