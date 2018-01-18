@@ -14,13 +14,13 @@ RUN apt-get install -y libffi-dev libssl-dev wget jq
 
 RUN pip3 install -U pip
 
-RUN pip3 install azure-cli==2.0.7 && \
+RUN pip3 install azure-cli==2.0.25 && \
     pip3 install awscli==1.11.107 && \
     npm install --no-optional -g azure-cli@0.10.14
  
 # WHY: Non LTS ubuntu loses support too soon, Go on LTS is too old
 ENV GO_VERSION="1.9"
-ENV GOROOT="/go"
+ENV GOROOT="/goroot"
 ENV PATH=${PATH}:${GOROOT}/bin
 
 RUN cd /tmp && \
