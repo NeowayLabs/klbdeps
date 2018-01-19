@@ -1,5 +1,8 @@
 all: image
 
+publish: image
+	docker push neowaylabs/klbdeps
+
 image:
 	docker build . -t neowaylabs/klbdeps
 
